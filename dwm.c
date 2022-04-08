@@ -1761,6 +1761,7 @@ run(void)
 void
 runAutostart(void) {
 	system("killall -q dwmblocks; dwmblocks &");
+	system("pipewire &; pipewire-pulse &; pipewire-media-session &");
 }
 
 void
