@@ -187,9 +187,9 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_q, spawn, SHCMD("sysact")},
     {MODKEY, XK_w, spawn, SHCMD("firefox")},
     {MODKEY | ShiftMask, XK_w, spawn, SHCMD(TERMINAL " -e sudo nmtui")},
-    //{ MODKEY,			XK_e,		spawn,		SHCMD(TERMINAL " -e
-    //neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") }, {
-    //MODKEY|ShiftMask, XK_e,
+    //{ MODKEY,			XK_e,		spawn,		SHCMD(TERMINAL "
+    //-e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") }, {
+    // MODKEY|ShiftMask, XK_e,
     // spawn,		SHCMD(TERMINAL " -e abook -C
     //~/.config/abook/abookrc --datafile ~/.config/abook/addressbook") },
     {MODKEY, XK_r, spawn, SHCMD(TERMINAL " -e lfub")},
@@ -224,7 +224,7 @@ static Key keys[] = {
     {MODKEY, XK_a, togglegaps, {0}},
     {MODKEY | ShiftMask, XK_a, defaultgaps, {0}},
     {MODKEY, XK_s, togglesticky, {0}},
-    {MODKEY, XK_e, spawn, SHCMD("emacs -nw")},
+    {MODKEY, XK_e, spawn, SHCMD("kitty -e emacs -nw")},
     /* { MODKEY|ShiftMask,		XK_s,		spawn, SHCMD("")
      * },
      */
