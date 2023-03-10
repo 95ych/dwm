@@ -62,8 +62,7 @@ static const Rule rules[] = {
                                                                           isterminal  noswallow  monitor */
 	{"Gimp", NULL, NULL, 1 << 8, 0, 0, 0, -1},
 	{"Spotify", NULL, "spotify", 1 << 2, 0, 0, 0, -1},
-	{"firefox", NULL, NULL, 1 << 1, 0, 0, 0, -1},
-	{"neovide", NULL, NULL, 0, 0, 0, 0, -1},
+	{"Neovide", NULL, NULL, 0, 0, 0, 0, -1},
 	{TERMCLASS, NULL, NULL, 0, 0, 1, 0, -1},
 	{NULL, NULL, "Event Tester", 0, 0, 0, 1, -1},
 	//{TERMCLASS,      "bg",     NULL,           0, 0, 1, 1 << 7, -1},
@@ -176,7 +175,7 @@ static Key keys[] = {
 	 spawn,
 	 SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)")},
 	{MODKEY, XK_BackSpace, spawn, SHCMD("sysact")},
-	{MODKEY | ShiftMask, XK_BackSpace, spawn, SHCMD("sysact")},
+	// {MODKEY | ShiftMask, XK_BackSpace, spawn, SHCMD("sysact")},
 
 	{MODKEY, XK_Tab, view, {0}},
 	/* { MODKEY|ShiftMask,		XK_Tab,		spawn, SHCMD("")
@@ -269,7 +268,7 @@ static Key keys[] = {
 	{MODKEY | ShiftMask,
 	 XK_m,
 	 spawn,
-	 SHCMD("pactl set-source-mute 0 toggle; kill -44 $(pidof dwmblocks)")},
+	 SHCMD("pactl set-source-mute 1 toggle; kill -44 $(pidof dwmblocks)")},
 	//{ MODKEY,			XK_comma,	spawn,		SHCMD("mpc
 	// prev")
 	//}, { MODKEY|ShiftMask,		XK_comma,	spawn,
@@ -328,7 +327,7 @@ static Key keys[] = {
 	{MODKEY, XK_Print, spawn, SHCMD("dmenurecord")},
 	{MODKEY | ShiftMask, XK_Print, spawn, SHCMD("dmenurecord kill")},
 	{MODKEY, XK_Delete, spawn, SHCMD("dmenurecord kill")},
-	{MODKEY, XK_Scroll_Lock, spawn, SHCMD("killall screenkey || screenkey &")},
+	{MODKEY | ShiftMask, XK_BackSpace, spawn, SHCMD("killall screenkey || screenkey &")},
 
 	{0, XF86XK_AudioMute, spawn, SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)")},
 	{0,
